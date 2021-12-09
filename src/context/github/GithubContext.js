@@ -26,9 +26,10 @@ export const GithubProvider = ({ children }) => {
 			payload: items,
 		})
 	}
+	// get single users
 	const getUser = async (login) => {
 		setLoading()
-		const response = await fetch(`${GITHUB_URL}/users?${login}`, {
+		const response = await fetch(`${GITHUB_URL}/users/${login}`, {
 			headers: {
 				Authorization: `token ${GITHUB_TOKEN}`,
 			},
