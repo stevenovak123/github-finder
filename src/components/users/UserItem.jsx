@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-const UserItem = ({ user: { login, avatar_url } }) => {
+import PropTypes from 'prop-types'
+
+function UserItem({ user: { login, avatar_url } }) {
 	return (
 		<div className='card shadow-md compact side bg-base-100'>
 			<div className='flex-row items-center space-x-4 card-body'>
@@ -28,4 +29,5 @@ const UserItem = ({ user: { login, avatar_url } }) => {
 UserItem.propTypes = {
 	user: PropTypes.object.isRequired,
 }
+
 export default UserItem
